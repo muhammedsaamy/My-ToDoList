@@ -13,6 +13,7 @@ export class DashboardComponent implements OnInit {
   taskArr:Task[]=[];
   addTaskValue:string='';
   editTaskValue:string='';
+  // isThereTask:Boolean=false
   // dnTask:string=''
   constructor(private crudService:CrudService) { }
 
@@ -22,6 +23,9 @@ export class DashboardComponent implements OnInit {
     this.taskObj=new Task();
     this.taskArr=[]
     this.getAllTasks()
+    if(this.taskArr.length==0){
+      // this.isThereTask=true
+    }
   }
 
   getAllTasks(){
@@ -40,6 +44,7 @@ export class DashboardComponent implements OnInit {
     this.crudService.addTask(this.taskObj).subscribe(data=>{
         this.ngOnInit()
         this.addTaskValue=''
+        // this.isThereTask=false
     }
 
     //,(err:Error)=>{alert(err.message)}
@@ -68,6 +73,9 @@ export class DashboardComponent implements OnInit {
     }
     catch{
       alert('faild to add Task')
+    }
+    if(this.taskArr.length==0){
+      // this.isThereTask=true
     }
 
   }

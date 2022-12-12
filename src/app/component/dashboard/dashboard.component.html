@@ -22,6 +22,7 @@
             Tasks :
         </h4>
         <div style="overflow-y: auto; height: 350px;">
+            <div *ngIf="taskArr.length==0">No Tasks yet</div>
         <div class="m-3" *ngFor="let task of taskArr; let i=index;">
             <div  class="p-2 shadow border"><p class="task">Task {{i+1}}</p>
                 <div class="input-group row ps-3">
