@@ -1,0 +1,16 @@
+.target
+{
+    border-radius: 25px;
+    background-color: rgb(190, 190, 230);
+}
+.txt{
+    border-radius: 15px;
+}
+.clr{
+    background-color: rgb(163, 173, 224);
+    margin-top: 10px;
+}
+.task{
+    color: brown;
+    font-weight: bolder;
+}
