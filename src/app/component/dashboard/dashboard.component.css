@@ -14,3 +14,9 @@
     color: brown;
     font-weight: bolder;
 }
+.noTasks{
+    font-weight: bolder;
+    font-size: larger;
+    text-align: center;
+    margin-top: 100px;
+}

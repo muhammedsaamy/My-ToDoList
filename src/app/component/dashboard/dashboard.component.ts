@@ -44,6 +44,7 @@ export class DashboardComponent implements OnInit {
     this.crudService.addTask(this.taskObj).subscribe(data=>{
         this.ngOnInit()
         this.addTaskValue=''
+        // console.log('add')
         // this.isThereTask=false
     }
 
@@ -66,17 +67,19 @@ export class DashboardComponent implements OnInit {
 
   deletTask(eTask:Task){
     try{
-      this.crudService.deletTask(eTask).subscribe((data)=>{
+      if(confirm('Do you wanna delet it?')){this.crudService.deletTask(eTask).subscribe((data)=>{
         this.ngOnInit();
       }
-  )
+        )}
+
+
     }
     catch{
-      alert('faild to add Task')
+      alert('faild to delet Task')
     }
-    if(this.taskArr.length==0){
-      // this.isThereTask=true
-    }
+    // if(this.taskArr.length==0){
+    //   // this.isThereTask=true
+    // }
 
   }
 

@@ -22,14 +22,14 @@
             Tasks :
         </h4>
         <div style="overflow-y: auto; height: 350px;">
-            <div *ngIf="taskArr.length==0">No Tasks yet</div>
+            <div class="noTasks" *ngIf="taskArr.length==0">No Tasks yet</div>
         <div class="m-3" *ngFor="let task of taskArr; let i=index;">
             <div  class="p-2 shadow border"><p class="task">Task {{i+1}}</p>
                 <div class="input-group row ps-3">
                     <div class="card col-md-10 border-0">
                         {{task.task_name}}
                     </div>
-                    <button class="btn btn-outline-primary col me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" (click)="call(task)">e</button>
+                    <button class="btn btn-outline-primary col me-2" data-bs-toggle="modal" data-bs-target="#exampleModal" type="button" (click)="call(task)">Edit</button>
                     <button class="btn btn-outline-danger col" (click)="deletTask(task)">X</button>
                     <!-- <h3 class="dn">{{dnTask}}</h3> -->
                     <!-- <button class="btn btn-outline-success col-6 m-auto "  (click)="doneTask(task)">Done</button> -->
